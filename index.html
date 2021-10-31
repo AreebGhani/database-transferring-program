@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <title>Database Transferring</title>
+    
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+  <link href="./css/style.css" rel="stylesheet"/>
+  
+  <link href="./css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <script src="./js/materialize.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+          
+    <br/>
+    
+    <div class="container">
+    
+      <form id="form" action="./php/database.php" method="POST">
+  
+        <div class="row">
+
+          <div class="col l6 s12">
+
+            <h5 class="left-align teal-text center"><u>Database No.1</u></h5>
+
+            <br/>              
+
+            <div class="input-field">
+                                  
+              <input 
+                                  
+               id="Server1"
+               class="validate"
+               type="text"
+               name="Server1"
+               required >
+            
+              </input>
+            
+              <label for="Server1"> <strong>Server</strong> </label>
+                                   
+            </div>
+            
+            <div class="input-field">
+                                  
+              <input 
+                                  
+               id="User1"
+               class="validate"
+               type="text"
+               name="User1"
+               required >
+             
+              </input>
+            
+              <label for="User1"> <strong>User</strong> </label>
+        
+            </div>
+
+            <div class="input-field">
+                                  
+              <input 
+                                  
+               id="Password1"
+               class="validate"
+               type="text"
+               name="Password1"
+               required >
+            
+              </input>
+            
+              <label for="Password1"> <strong>Password</strong> </label>
+                                   
+            </div>
+
+            <div class="input-field">
+                                  
+              <input 
+                                  
+               id="Database1"
+               class="validate"
+               type="text"
+               name="Database1"
+               required >
+            
+              </input>
+            
+              <label for="Database1"> <strong>Database</strong> </label>
+                                   
+            </div>
+        
+          </div>
+
+          <div class="col l6 s12">
+
+            <h5 class="left-align teal-text center"><u>Database No.2</u></h5>
+
+            <br/>              
+
+            <div class="input-field">
+                                  
+              <input 
+                                  
+               id="Server2"
+               class="validate"
+               type="text"
+               name="Server2"
+               required >
+            
+              </input>
+            
+              <label for="Server2"> <strong>Server</strong> </label>
+                                   
+            </div>
+            
+            <div class="input-field">
+                                  
+              <input 
+                                  
+               id="User2"
+               class="validate"
+               type="text"
+                name="User2"
+               required >
+            
+              </input>
+            
+              <label for="User2"> <strong>User</strong> </label>
+                                   
+            </div>
+
+            <div class="input-field">
+                                  
+              <input 
+                                  
+               id="Password2"
+               class="validate"
+               type="text"
+               name="Password2"
+               required >
+            
+              </input>
+            
+              <label for="Password2"> <strong>Password</strong> </label>
+                                   
+            </div>
+
+            <div class="input-field">
+                                  
+              <input 
+                                  
+               id="Database2"
+               class="validate"
+               type="text"
+               name="Database2"
+               required >
+            
+              </input>
+            
+              <label for="Database2"> <strong>Database</strong> </label>
+                                   
+            </div>
+
+          </div>
+
+        </div>
+
+        <i>• • • • • • • • • • • • •</i>
+
+        <div class="input-field">
+                                  
+          <input 
+                                  
+            id="Table1"
+            class="validate"
+            type="text"
+            name="Table1"
+            required >
+            
+          </input>
+            
+          <label for="Table1"> <strong>Table</strong> </label>
+        
+        </div>
+
+        <div class="input-field container" style="margin-left:5px;">
+
+          <select id="select" onchange="option(this.value)" required class="browser-default" style="cursor:pointer;">
+           <option disabled selected>No. Of Columns</option>
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5</option>
+          </select>
+       
+        </div>
+
+        <div id="inputfield"></div>
+                    
+        <br/>
+  
+        <div class="row"><div class="col l4 m6   s12 d-flex justify-content-center">  
+                      
+          <button
+                                      
+            type="submit"
+            name="submit"
+            value="submit"
+            id="submit"
+            class="button" >
+                                          
+            <strong>Connect</strong>
+            
+            <i class="material-icons">send</i>
+            
+          </button>
+
+        </div>
+
+        <div class="col l6 m6 s12 grey lighten-2 red-text message"><strong><p id="message"></p></strong></div></div>
+
+      </form>
+      
+      <br/>
+
+      <br/>
+
+      <div id="getdata"></div>
+      <div id="response"></div>
+    
+    </div>
+             
+    <br/><br/><br/>
+    
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
+  <script src="./js/connectDatabase.js"></script>
+  <script src="./js/message.js"></script>
+  <script src="./js/getData.js"></script>
+  <script src="./js/option.js"></script>
+  <script src="./js/validate.js"></script>
+
+</body>
+
+</html>
