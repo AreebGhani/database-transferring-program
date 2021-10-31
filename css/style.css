@@ -69,7 +69,7 @@ body {
     transform: translateX(20px);
 }
 
-@media only screen and (min-width:900px) and (max-width: 5000px) {
+@media only screen and (min-width:100px) and (max-width: 600px) {
     .message {
         margin-top: 30px;
     }
